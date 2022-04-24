@@ -8,29 +8,27 @@ module.exports = {
 //index
 async function index(req, res) {
     try{
-        const jobs = await Job.find({}).sort('date').exec();
-        jobs.sort((a, b) => a.date.sortOrder - b.date.sortOrder);
+        const jobs = await Job.find({}).sort({ date: -1, "_id": -1 }).exec();
+        //TODO: research created-at syntax
         res.status(200).json(jobs);
     }catch(e){
         res.status(400).json({ msg: e.message });
     }
 }
-//new
-// async function new(req, res) {
-//     try{
-//         const jobs = await Job.create({}).exec();
-//         res.status(200).json(jobs);
-//     }catch(e){
-//         res.status(400).json({ msg: e.message });
-//     }
-// }
 
 //delete
 
 //update
 
 //create
-
+new async function create(req, res) {
+    try{
+        const jobs = await Job.create({}).exec();
+        res.status(200).json(jobs);
+    }catch(e){
+        res.status(400).json({ msg: e.message });
+    }
+}
 //edit
 
 //show
