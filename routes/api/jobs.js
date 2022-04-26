@@ -6,6 +6,6 @@ router.get('/', jobsCtrl.index);
 
 router.get('/:id', jobsCtrl.show);
 
-router.get('/', jobsCtrl.create);
+router.post('/', jobsCtrl.create);
 
 module.exports = router;

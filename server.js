@@ -24,10 +24,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 // app.use('/api/users', require('./routes/api/users'));
+app.use('/api/jobs', require('./routes/api/jobs'));
 
 // Protect the API routes below from anonymous users
+
 // const ensureLoggedIn = require('./config/ensureLoggedIn');
-// app.use('/api/items', ensureLoggedIn, require('./routes/api/items'));
+// app.use('/api/jobs', ensureLoggedIn, require('./routes/api/jobs'));
 // app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 
 // The following "catch all" route (note the *) is necessary
