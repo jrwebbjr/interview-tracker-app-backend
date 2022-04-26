@@ -1,9 +1,10 @@
-const e = require('express');
+const express = require('express');
 const Job = require('../../models/job');
 
 module.exports = {
     index,
-    show
+    show,
+    create
 };
 //index
 async function index(req, res) {
@@ -23,7 +24,7 @@ async function index(req, res) {
 //create
 new async function create(req, res) {
     try{
-        const jobs = await Job.create({}).exec();
+        const job = await Job.create({}).exec();
         res.status(200).json(jobs);
     }catch(e){
         res.status(400).json({ msg: e.message });
