@@ -3,11 +3,13 @@ const express = require('express');
 const path = require('path');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cors = require('cors');
 
 require('dotenv').config();
 require('./config/database');
 
 const app = express();
+app.use(cors({ origin: true, credentials: true }));
 
 app.use(logger('dev'));
 // there's no need to mount express.urlencoded middleware

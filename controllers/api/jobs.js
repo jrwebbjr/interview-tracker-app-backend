@@ -22,10 +22,10 @@ async function index(req, res) {
 //update
 
 //create
-new async function create(req, res) {
+async function create(req, res) {
     try{
         const job = await Job.create({}).exec();
-        res.status(200).json(jobs);
+        res.status(200).json(job);
     }catch(e){
         res.status(400).json({ msg: e.message });
     }
