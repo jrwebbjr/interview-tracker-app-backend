@@ -10,7 +10,7 @@ module.exports = {
 async function index(req, res) {
     try{
         const jobs = await Job.find({}).sort({ date: -1, "_id": -1 }).exec();
-        //TODO: Get Data to post then check to see Sort is working correctly, may have to switch to time stamps
+        //Sort is working correctly by date, -1 is newest to oldest .exec() executes and stops the line.
         res.status(200).json(jobs);
     }catch(e){
         res.status(400).json({ msg: e.message });
