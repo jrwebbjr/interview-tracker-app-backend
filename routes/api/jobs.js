@@ -4,10 +4,14 @@ const jobsCtrl = require('../../controllers/api/jobs');
 
 
 
-router.get('/jobs/:id', jobsCtrl.show);
+
+
+router.get('/', jobsCtrl.index);
 
 router.post('/', jobsCtrl.create);
 
-router.get('/', jobsCtrl.index);
+router.get('/:id', jobsCtrl.show);
+//actual route /api/jobs/:id 
+//this is declared in server.js
 
 module.exports = router;

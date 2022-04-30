@@ -34,10 +34,12 @@ async function create(req, res) {
 
 //show
 async function show(req, res) {
+    const id = req.params.id
     try{
-        const job = await Job.findById(req.params.id);
-        res.status(200).json(job);
+        
+        const foundJob = await Job.findById(id);
+        res.status(200).json(foundJob);
     }catch(e){
-        res.status(400).json({ msg: e.message })
+        res.status(400).json({ msg: e.message, other: "**BAD REQUEST for foundJob**" })
     }
 }
