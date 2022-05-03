@@ -3,8 +3,11 @@ const Job = require('../../models/job');
 
 module.exports = {
     index,
+    destroy,
+    update,
+    create,
+    edit,
     show,
-    create
 };
 //index
 async function index(req, res) {
@@ -18,8 +21,26 @@ async function index(req, res) {
 }
 
 //delete
+async function destroy(req, res) {
+    const id = req.params.id
+    try{
+        const foundJob = await Job.findByIdAndDelete(id);
+        res.status(200).json(foundJob);
+    }catch(e){
+        res.status(400).json({ msg: e.message })
+    }
+}
 
 //update
+async function update(req, res) {
+    const id = req.params.id
+    try{
+        const foundJob = await Job.findByIdAndUpdate(id);
+        res.status(200).json(foundJob);
+    }catch(e){
+        res.status(400).json({ msg: e.message })
+    }
+}
 
 //create
 async function create(req, res) {
@@ -31,6 +52,15 @@ async function create(req, res) {
     }
 }
 //edit
+async function update(req, res) {
+    const id = req.params.id
+    try{
+        const foundJob = await Job.findByIdAndUpdate(id);
+        res.status(200).json(foundJob);
+    }catch(e){
+        res.status(400).json({ msg: e.message })
+    }
+}
 
 //show
 async function show(req, res) {

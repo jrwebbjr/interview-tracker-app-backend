@@ -4,10 +4,8 @@ const Schema = require('mongoose').Schema;
 
 const jobSchema = new Schema({
     company: { type: String, required: true },
-    location: { type: String,
-    required: true },
-    position: { type: String,
-    required: true  },
+    location: { type: String, required: true },
+    position: { type: String, required: true  },
     date: String,
     status: String, 
     applicationService: String,
