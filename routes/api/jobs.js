@@ -8,7 +8,9 @@ const jobsCtrl = require('../../controllers/api/jobs');
 
 router.get('/', jobsCtrl.index);
 
-router.post('/:id/update', jobsCtrl.update);
+router.delete('/update/:id', jobsCtrl.destroy)
+
+router.put('/update/:id', jobsCtrl.update);
 
 router.post('/', jobsCtrl.create);
 

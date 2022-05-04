@@ -6,7 +6,6 @@ module.exports = {
     destroy,
     update,
     create,
-    edit,
     show,
 };
 //index
@@ -52,24 +51,23 @@ async function create(req, res) {
     }
 }
 //edit
-async function update(req, res) {
-    const id = req.params.id
-    try{
-        const foundJob = await Job.findByIdAndUpdate(id);
-        res.status(200).json(foundJob);
-    }catch(e){
-        res.status(400).json({ msg: e.message })
-    }
-}
+// async function update(req, res) {
+//     const id = req.params.id
+//     try{
+//         const foundJob = await Job.findByIdAndUpdate(id);
+//         res.status(200).json(foundJob);
+//     }catch(e){
+//         res.status(400).json({ msg: e.message })
+//     }
+// }
 
 //show
 async function show(req, res) {
     const id = req.params.id
     try{
-        
         const foundJob = await Job.findById(id);
         res.status(200).json(foundJob);
     }catch(e){
-        res.status(400).json({ msg: e.message, other: "**BAD REQUEST for foundJob**" })
+        res.status(400).json({ msg: e.message })
     }
 }
