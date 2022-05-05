@@ -2,6 +2,7 @@ const User = require('../../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
+
 module.exports = {
   create,
   login,
@@ -20,7 +21,7 @@ async function login(req, res) {
     const match = await bcrypt.compare(req.body.password, user.password);
     if (!match) throw new Error();
     res.status(200).json( createJWT(user) );
-  } catch {
+  } catch(err) {
     res.status(400).json('Bad Credentials');
   }
 }
