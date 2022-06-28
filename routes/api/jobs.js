@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 const jobsCtrl = require('../../controllers/api/jobs');
 
-router.get('/:id/index', jobsCtrl.index);
+router.get('/:userid/index', jobsCtrl.index);
 
-router.delete('/:id/delete/:id', jobsCtrl.destroy)
+router.delete('/:userid/delete/:id', jobsCtrl.destroy)
 
-router.put('/:id/update/:id', jobsCtrl.update);
+router.put('/:userid/update/:id', jobsCtrl.update);
 
-router.post('/:id/new', jobsCtrl.create);
+router.post('/:userid/new', jobsCtrl.create);
 
-router.get('/:id', jobsCtrl.show);
+router.get('/:userid/show/:id', jobsCtrl.show);
 //actual route /api/jobs/:id 
 //this is declared in server.js
 

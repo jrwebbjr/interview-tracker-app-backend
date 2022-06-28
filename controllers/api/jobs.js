@@ -1,6 +1,7 @@
 const express = require('express');
 const Job = require('../../models/job');
 
+
 module.exports = {
     index,
     destroy,
@@ -33,8 +34,9 @@ async function destroy(req, res) {
 //update
 async function update(req, res) {
     const id = req.params.id
+    const body = req.body
     try{
-        const foundJob = await Job.findByIdAndUpdate(id);
+        const foundJob = await Job.findByIdAndUpdate(id, body, {new:true});
         res.status(200).json(foundJob);
     }catch(e){
         res.status(400).json({ msg: e.message })
