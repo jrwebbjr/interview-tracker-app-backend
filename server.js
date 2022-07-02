@@ -43,7 +43,7 @@ app.get('/*', function(req, res) {
 const port = process.env.PORT || 3001;
 
 // Test to ensure server is deployed on Heroku 7/2/22
-app.get('/', (req, res) => { res.send('Hello from Express!')
+app.get('/', (req, res) => { res.send('Hello from Express!') });
 
 
 app.listen(port, function() {
