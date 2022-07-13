@@ -34,7 +34,6 @@ export default function Nav(){
                 scale: [1, 2, 1],
                 rotate: [0, 360, 0, ],
               }}
-
             transition={{ duration: 1 }}
             className="flex items-center justify-center flex-shrink-0 text-white mr-6 ml-6">
                 <span className="font-dosis font-bold text-6xl tracking-tight">Apply</span>
