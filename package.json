@@ -81,10 +81,10 @@
   "scripts": {
   
     
-  "start": "node server.js",
+  "start:dev": "node server.js",
   
     
-  "start:dev": "react-scripts start",
+  "start": "react-scripts start",
   
     
   "build": "react-scripts build",
