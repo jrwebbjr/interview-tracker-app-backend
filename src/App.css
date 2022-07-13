@@ -1,38 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+:root {
+  --custom-white: rgb(232, 232, 232);
+  --terra-cotta: rgb(232, 116, 97);
+  --baby-powder: rgb(241, 245, 242);
+  --blue-denim: rgb(18, 67, 125);
+  --celadon: rgb(186, 217, 181);
+}
+
 .App {
   text-align: center;
+  color: black;
+  font-family: effra,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(232, 232, 232);
+  height: 100vh;
+  padding: 2vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
+  border: .5px solid black;
+  background-color: rgb(232, 232, 232);
   display: flex;
+  flex-shrink: initial;
   flex-direction: column;
+  padding: 50px;
+}
+
+.input {
+  margin-bottom: 15px;
+  width: 800px;
+}
+
+.label {
+  display: inline-block;
+  text-align: right;
+  width: 200px;
+  margin-right: 25px;
+}
+
+.button {
+  background-color: var(--blue-denim);
+  background: linear-gradient(217deg, rgba(18, 67, 125, 0.8), rgba(255,0,0,0) 80.71%),
+              linear-gradient(127deg, rgba(0, 32, 71, 0.8), rgba(0,255,0,0) 80.71%),
+              linear-gradient(360deg, rgba(186, 217, 181, 0.8), rgba(20,90,255,0) 20.71%);
+  color: var(--custom-white);
+  border: none;
+  box-shadow: 5px 5px 10px 1px rgb(185, 185, 185);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  
+}
+
+.button-icon-style {
+  color: var(--custom-white);
+}
+
+.logo {
+  color: var(--baby-powder);
+  margin-left: 50px;
+  font-family: omnium-tagline, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.pencil {
+  color: goldenrod;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  position: sticky;
+  background: linear-gradient(217deg, rgba(18, 67, 125), rgba(15,0,0,0) 95.71%),
+              linear-gradient(127deg, rgba(18, 67, 125), rgba(0,15,0,0) 80.71%);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
   color: white;
+  padding-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links {
+  display: flex;
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search {
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: white;
+  justify-content: flex-end;
+  margin-right: 50px;
 }
+
+.icon {
+  margin-right: 10px;
+}
+
+.job-list {
+  display: flex;
+  list-style:none;
+} 
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+  border: .1px solid rgb(18, 67, 125);
+  margin: 10px;
+  border-radius: 16px;
+  box-shadow: 5px 5px 10px 1px rgb(185, 185, 185);
+} */
