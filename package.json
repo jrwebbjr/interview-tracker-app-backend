@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:3001",
+  "proxy": "https://ap-ply.herokuapp.com/",
   
   "name": "interview-tracker-app-backend",
   
