@@ -1,7 +1,7 @@
 
 const express = require('express');
 const path = require('path');
-// const favicon = require('serve-favicon');
+const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cors = require('cors');
 
@@ -17,8 +17,8 @@ app.use(express.json());
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
 
-// Deleted favicon.ico and commented out build config below 7/2/22
-// app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
+// Replaced favicon.ico with my own favicon, still getting build error 7/14/22
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Check if token and create req.user
@@ -58,5 +58,5 @@ const port = process.env.PORT || 3001;
 
 
 app.listen(port, function() {
-  console.log(`Express app running on port ${port}`)
+  console.log(`App is running on port ${port}`)
 });
