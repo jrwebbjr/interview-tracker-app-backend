@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'ap-ply.herokuapp.com/',
+      target: 'https://localhost:3001',
       changeOrigin: true,
     })
   );

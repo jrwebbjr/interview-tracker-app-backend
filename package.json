@@ -1,6 +1,5 @@
 {
-  "proxy": "https://localhost:3001",
-  "name": "interview-tracker-app-backend",
+  "name": "interview-tracker-app",
   "version": "0.1.0",
   "private": true,
   "engines": {
