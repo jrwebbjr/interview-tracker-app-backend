@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import * as userService from '../../src/utilities/users-service';
+import * as userService from '../utilities/users-service';
 import UserLogOut from './userLogOut/UserLogOut';
 import { motion } from 'framer-motion';
 

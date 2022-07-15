@@ -19,7 +19,7 @@ app.use(express.json());
 
 // Replaced favicon.ico with my own favicon, still getting build error 7/14/22
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
@@ -36,16 +36,16 @@ app.use('/api/jobs', require('./routes/api/jobs'));
 // to return the index.html on all non-AJAX requests
 
 // Commented out 7/13/22 after 504 error
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/*', function(req, res) {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 // // Added below code 7/13/22 for deployment
 // if (process.env.NODE_ENV == "production") {
 //   app.use(express.static(path.join(__dirname, "build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 
 
@@ -58,7 +58,7 @@ const port = process.env.PORT || 3001;
 
 // Added below code 7/13/22 for deployment
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "build")));
+  app.use(express.static(path.join(__dirname, "client", "build")));
 }
 
 
