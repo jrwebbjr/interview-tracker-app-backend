@@ -18,7 +18,7 @@ app.use(express.json());
 // to serve from the production 'build' folder
 
 // Replaced favicon.ico with my own favicon, still getting build error 7/14/22
-app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'build', 'Apply.ico')));
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 // Check if token and create req.user
@@ -44,7 +44,7 @@ app.use('/api/jobs', require('./routes/api/jobs'));
 // if (process.env.NODE_ENV == "production") {
 //   app.use(express.static(path.join(__dirname, "build")));
 
-  app.get("*", (req, res) => {
+  app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 
