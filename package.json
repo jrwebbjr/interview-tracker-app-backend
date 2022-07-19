@@ -31,15 +31,11 @@
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
   },
-  "scripts": {
-    "start": "node server.js",
-    "client": "cd client && npm run start",
-    "server": "node server.js --ignore client/",
-    "client-install":"cd client && npm install",
-    "server-install":"npm install",
-    "install-all": "concurrently \"npm run client-install\" \"npm run server-install\"",
-    "dev" : "concurrently \"npm run client\" \"npm run server\"",
-    "heroku-postbuild" : "cd client && npm install && npm run build"
+    "scripts": {
+      "start": "node server",
+      "server": "nodemon server",
+      "client": "npm run start --prefix mappinapp",
+      "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "eslintConfig": {
     "extends": [

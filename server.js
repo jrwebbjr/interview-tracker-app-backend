@@ -40,9 +40,9 @@ app.use('/api/jobs', require('./routes/api/jobs'));
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
 
-// // Added below code 7/13/22 for deployment
-// if (process.env.NODE_ENV == "production") {
-//   app.use(express.static(path.join(__dirname, "build")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client", "build")));
+}
 
   app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
@@ -56,10 +56,7 @@ const port = process.env.PORT /* || 3001; */
 // Test to ensure server is deployed on Heroku 7/2/22
 // app.get('/', (req, res) => { res.send('Hello from Express!') });
 
-// Added below code 7/13/22 for deployment
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client", "build")));
-}
+
 
 
 app.listen(port, function() {
