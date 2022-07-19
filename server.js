@@ -14,14 +14,15 @@ app.use(cors());
 app.use(logger('dev'));
 // there's no need to mount express.urlencoded middleware
 app.use(express.json());
+// express middleware to staticly serve public folder 7/19 hopefully this fixes favicon error during deployment
+app.use(express.static('public'));
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
 // 7/19/22 configured serve-favicon to serve from public.
 // Changed directory name from build to public
 app.use(favicon(path.join(__dirname, 'public', 'Apply.ico')));
 app.use(express.static(path.join(__dirname, "client", "build")));
-// Added below to serve public in deployment
-app.use('/static', express.static(path.join(__dirname, 'public')));
+
 
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
