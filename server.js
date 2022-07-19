@@ -16,10 +16,12 @@ app.use(logger('dev'));
 app.use(express.json());
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
-
-// Replaced favicon.ico with my own favicon, still getting build error 7/14/22
-app.use(favicon(path.join(__dirname, 'build', 'Apply.ico')));
+// 7/19/22 configured serve-favicon to serve from public.
+// Changed directory name from build to public
+app.use(favicon(path.join(__dirname, 'public', 'Apply.ico')));
 app.use(express.static(path.join(__dirname, "client", "build")));
+// Added below to serve public in deployment
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
