@@ -51,7 +51,7 @@ app.use('/api/jobs', require('./routes/api/jobs'));
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
-const port = process.env.PORT || 3001;
+const port = process.env.PORT /* || 3001; */
 
 // Test to ensure server is deployed on Heroku 7/2/22
 // app.get('/', (req, res) => { res.send('Hello from Express!') });
