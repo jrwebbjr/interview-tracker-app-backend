@@ -21,7 +21,7 @@ app.use(express.static('public'));
 // 7/19/22 configured serve-favicon to serve from public.
 // Changed directory name from build to public
 app.use(favicon(path.join(__dirname, 'public', 'Apply.ico')));
-app.use(express.static(path.join(__dirname, "client", "build")));
+// app.use(express.static(path.join(__dirname, "client", "build")));
 
 
 // Check if token and create req.user
