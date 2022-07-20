@@ -55,7 +55,7 @@ return (
         </div>
       </div>
     </motion.div>
-    <p className="p-5 text-white flex justify-center items-center rounded-lg shadow-xl">&nbsp;{error}</p>
+    <p className="pt-[25px] font-dosis text-white text-lg flex justify-center items-center rounded-lg shadow-xl">&nbsp;{error}</p>
   </main>
 );
 }
