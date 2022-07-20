@@ -33,9 +33,10 @@
   },
     "scripts": {
       "start": "node server.js",
-      "server": "nodemon server",
-      "client": "npm run start --prefix mappinapp",
-      "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+      "server": "nodemon server.js",
+      "client": "npm run start",
+      "api": "nodemon server.js",
+      "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": [
