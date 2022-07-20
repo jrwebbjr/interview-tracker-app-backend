@@ -21,7 +21,8 @@ app.use(express.static('public'));
 // 7/19/22 configured serve-favicon to serve from public.
 // Changed directory name from build to public
 app.use(favicon(path.join(__dirname, 'client/public', 'app.ico')));
-app.use(express.static(path.join(__dirname, "client", "build")));
+// changed from "client", "build" to "client/build"
+app.use(express.static(path.join(__dirname, "client/build")));
 
 
 // Check if token and create req.user
@@ -44,7 +45,7 @@ app.use('/api/jobs', require('./routes/api/jobs'));
 // });
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client", "build")));
+  app.use(express.static(path.join(__dirname, "client/build")));
 }
 
   app.get("/*", (req, res) => {
