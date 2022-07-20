@@ -56,8 +56,8 @@ if (process.env.NODE_ENV === "production") {
 // development to avoid collision with React's dev server
 const port = process.env.PORT || 3001;
 
-// Test to ensure server is deployed on Heroku 7/2/22
-// app.get('/', (req, res) => { res.send('Hello from Express!') });
+// Test to ensure server is deployed on Heroku 7/20/22
+app.get('/', (req, res) => { console.log('Hello from Express!') });
 
 app.listen(port, function() {
   console.log(`App is running on port ${port}`)
