@@ -1,18 +1,16 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useState } from 'react';
+import {  Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Nav from '../../components/Nav';
-import * as jobsApi from '../../utilities/jobs-api';
-import * as userService from '../../utilities/users-service';
 
 
 
-const JobIndex = ({ user, setUser, jobs }) => {
+const JobIndex = ({  jobs }) => {
 
     const [job, setJob] = useState(null);
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     // const handleClick = () => {
     //     setJob(job)

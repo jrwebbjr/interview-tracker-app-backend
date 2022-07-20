@@ -33,7 +33,7 @@ export default function Update({ user, jobs }){
 
     const handleSubmit = async (e) => {
         console.log("before Try")
-        //prevents page from refreshing
+        //prevents default behavior which stops page from refreshing
         e.preventDefault();
         
         try{ 

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import '../../App.css';
 import LoginForm from '../../components/loginForm/LoginForm';
 import SignUpForm from '../../components/signUpForm/SignUpForm';

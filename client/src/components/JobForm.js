@@ -47,7 +47,7 @@ export default function JobForm({ user, setUser }){
     return(
         <div>
             <Nav />
-            <div 
+            <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ ease: 'easeIn', duration: 1 }}
@@ -381,7 +381,7 @@ export default function JobForm({ user, setUser }){
                     </svg></button> }
                 </div>
                 </form>
-            </div>
+            </motion.div>
         </div>
         
     )
