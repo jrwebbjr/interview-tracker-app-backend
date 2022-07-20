@@ -20,8 +20,8 @@ app.use(express.static('public'));
 // to serve from the production 'build' folder
 // 7/19/22 configured serve-favicon to serve from public.
 // Changed directory name from build to public
-app.use(favicon(path.join(__dirname, 'public', 'Apply.ico')));
-// app.use(express.static(path.join(__dirname, "client", "build")));
+app.use(favicon(path.join(__dirname, 'client/public', 'app.ico')));
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 
 // Check if token and create req.user
@@ -58,9 +58,6 @@ const port = process.env.PORT /* || 3001; */
 
 // Test to ensure server is deployed on Heroku 7/2/22
 // app.get('/', (req, res) => { res.send('Hello from Express!') });
-
-
-
 
 app.listen(port, function() {
   console.log(`App is running on port ${port}`)
