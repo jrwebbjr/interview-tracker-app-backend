@@ -51,11 +51,11 @@ return (
             <div className='flex justify-center'>
                 <button className="flex px-6 py-2.5 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-500 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" type="submit">LOG IN</button>
             </div>
-            <p className="p-5 flex justify-center items-center rounded-lg shadow-xl">&nbsp;{error}</p>
           </form>
         </div>
       </div>
     </motion.div>
+    <p className="p-5 text-white flex justify-center items-center rounded-lg shadow-xl">&nbsp;{error}</p>
   </main>
 );
 }
