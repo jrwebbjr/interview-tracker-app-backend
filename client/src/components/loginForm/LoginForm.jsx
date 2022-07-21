@@ -43,10 +43,10 @@ return (
           <form className="h-max w-max flex flex-col justify-center m-10 gap-5" autoComplete="off" onSubmit={handleSubmit}>
             <div className=''> 
                 <label className='flex'>Email </label>
-                <input className="shadow-xl rounded-lg" type="text" name="email" value={credentials.email} onChange={handleChange} required /></div>
+                <input className="shadow-xl rounded-lg border border-solid border-gray-300" type="text" name="email" value={credentials.email} onChange={handleChange} required /></div>
             <div className=''>
                 <label className="flex">Password </label>
-                <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+                <input className='shadow-xl rounded-lg border border-solid border-gray-300' type="password" name="password" value={credentials.password} onChange={handleChange} required />
             </div>
             <div className='flex justify-center'>
                 <button className="flex px-6 py-2.5 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-500 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" type="submit">LOG IN</button>

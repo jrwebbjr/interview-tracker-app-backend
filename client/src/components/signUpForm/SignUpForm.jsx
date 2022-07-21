@@ -43,19 +43,19 @@ export default class SignUpForm extends Component {
                         <form className="flex flex-col gap-5" autoComplete="off" onSubmit={this.handleSubmit}>
                             <div className="p-5">
                                 <label className="pr-4">Name </label>
-                                <input className="flex" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+                                <input className="flex border border-solid border-gray-300" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
                             </div>
                             <div className="p-5">
                                 <label className="pr-4">Email </label>
-                                <input className="flex" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+                                <input className="flex border border-solid border-gray-300" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
                             </div>
                             <div className="p-5">
                                 <label className="pr-4">Password </label>
-                                <input className="flex" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                                <input className="flex border border-solid border-gray-300" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
                             </div>
                             <div className="p-5">
                                 <label className="pr-4">Confirm </label>
-                                <input className="flex" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+                                <input className="flex border border-solid border-gray-300" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
                             </div>
                         <div className="flex justify-center">
                             <div className="">
