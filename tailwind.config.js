@@ -4,8 +4,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       owd: ['omnium-wide', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-      dosis: ['Josefin Sans', 'sans-serif'],
+      serif: ['Merriweather', 'serif']
     },
     extend: {},
   },
