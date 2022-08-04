@@ -31,7 +31,7 @@ export default function Nav(){
         <motion.nav 
         initial={{ y: -200 }}
         animate={{ y: 0 }}
-        transition={{ ease: 'easeInElastic', duration: 1 }}
+        transition={{ ease: 'easeInElastic', duration: .5 }}
         className="flex items-center justify-between flex-wrap bg-gradient-to-l from-indigo-600 via-blue-600 to-cyan-600 p-6 border-b-2 sticky top-0">
             <div className="flex items-center justify-center flex-shrink-0 text-white mr-6 ml-6">
                 <span className="font-dosis font-bold text-6xl tracking-tight">Apply</span>

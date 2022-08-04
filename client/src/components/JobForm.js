@@ -322,6 +322,38 @@ export default function JobForm({ user, setUser }){
                         <label for="interview notes" className="form-label inline-block mb-2 text-gray-700">Interview Notes</label>
                             <textarea 
                             type="text"
+                            name="technical"
+                            value={jobForm.technical}
+                            onChange={handleChange}
+                            className="
+                            form-control
+                            block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            shadow-lg
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-indigo-600 focus:outline-none
+                            "
+                            id="technical-notes-text-area"
+                            rows="5">
+                        </textarea>
+                    </div>
+                </div>
+                <br/>
+                <div className="flex justify-center">
+                    <div className="mb-3 xl:w-96">
+                        <label for="Technical Notes" className="form-label inline-block mb-2 text-gray-700">Technical Notes</label>
+                        <textarea 
+                            type="text"
                             name="notes"
                             value={jobForm.notes}
                             onChange={handleChange}
@@ -345,37 +377,6 @@ export default function JobForm({ user, setUser }){
                             "
                             id="interview-notes-text-area"
                             rows="5">
-                        </textarea>
-                    </div>
-                </div>
-                <br/>
-                <div className="flex justify-center">
-                    <div className="mb-3 xl:w-96">
-                        <label for="Technical Notes" className="form-label inline-block mb-2 text-gray-700">Technical Notes</label>
-                        <textarea
-                        type="text"
-                        name="Technical"
-                        value={jobForm.technical}
-                        onChange={handleChange}
-                        className="
-                            form-control
-                            block
-                            w-full
-                            px-3
-                            py-1.5
-                            text-base
-                            font-normal
-                            text-gray-700
-                            bg-white bg-clip-padding
-                            border border-solid border-gray-300
-                            rounded
-                            shadow-lg
-                            transition
-                            ease-in-out
-                            m-0
-                            focus:text-gray-700 focus:bg-white focus:border-indigo-600 focus:outline-none
-                        "
-                        rows="5">
                         </textarea>
                     </div>
                 </div>
