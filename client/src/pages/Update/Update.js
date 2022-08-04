@@ -40,15 +40,6 @@ export default function Update({ user, jobs }){
             console.log("after Try")
             await jobsApi.updateJob(user._id, job._id, {
                 company: company.current.value, location: location.current.value, position: position.current.value, date: date.current.value, status: status.current.value, applicationService: applicationService.current.value, contacts: contacts.current.value, history: history.current.value, interviewProcess: interviewProcess.current.value, interviewNotes: interviewNotes.current.value, technicalNotes: technicalNotes.current.value
-            // await fetch(`http://localhost:3001/api/jobs/${user._id}/update/${id}`,{
-            //     method: "PUT", 
-            //     headers: {
-            //         "Accept": "application/json",
-            //         "Content-Type": "application/json"
-            //     },
-            //     body: JSON.stringify({
-            //         company: company.current.value, location: location.current.value, position: position.current.value, date: date.current.value, status: status.current.value, applicationService: applicationService.current.value, contacts: contacts.current.value, history: history.current.value, interviewProcess: interviewProcess.current.value, interviewNotes: interviewNotes.current.value, technicalNotes: technicalNotes.current.value
-            //     })
             })
             console.log("After API")
             Navigate(-1);
@@ -62,7 +53,7 @@ export default function Update({ user, jobs }){
             <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ ease: 'easeIn', duration: 1 }}
+            transition={{ ease: 'easeIn', duration: .5 }}
             className="flex justify-center min-h-full p-6">
                 <form className="rounded-lg shadow-xlg bg-white border-2 w-96 p-6 m-10" onSubmit={handleSubmit}>
                     <div className="flex justify-center">

@@ -46,29 +46,3 @@ function App() {
 }
 
 export default App;
-
-
- // const Navigate = useNavigate();
-
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // const [jobs, setJobs] = useState([])
-  // const [loading, setLoading] = useState(true)
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [jobsPerPage] = useState(8);
-
-  // const fetchJobs = async() => {
-  //     setLoading(true);
-  //     const res = await axios.get('/api/jobs/')
-  //     setJobs(res.data)
-  //     console.log(res.data)
-  //     setLoading(false);
-  // }
-
-  // useEffect(() => {
-  //     fetchJobs()
-  // }, []) 
-  // //Get Current Jobs - shows the '8' current jobs on the page at a time
-  // const indexOfLastJob = currentPage * jobsPerPage;
-  // const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  // const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
