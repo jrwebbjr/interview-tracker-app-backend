@@ -38,11 +38,6 @@ app.use('/api/jobs', require('./routes/api/jobs'));
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 
-// Commented out 7/13/22 after 504 error
-// app.get('/*', function(req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 }

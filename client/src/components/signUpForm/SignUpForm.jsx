@@ -37,7 +37,7 @@ export default class SignUpForm extends Component {
                 <motion.div 
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ ease: 'easeIn', duration: 1 }}
+                transition={{ ease: 'easeInElastic', duration: .5 }}
                 className="flex justify-center">
                     <div className="m-10 mt-5 mb-5 block p-6 rounded-lg shadow-lg bg-white border-2 border-solid border-indigo-600">
                         <form className="flex flex-col gap-5" autoComplete="off" onSubmit={this.handleSubmit}>

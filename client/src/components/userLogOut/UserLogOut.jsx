@@ -11,7 +11,7 @@ return (
   <motion.div 
   initial={{ scale: 0 }}
   animate={{ scale: 1 }}
-  transition={{ ease: 'easeIn', duration: 1 }}
+  transition={{ ease: 'easeInElastic', duration: .5 }}
   className="">
     <div>{user.name}</div>
     <div className="">{user.email}</div>

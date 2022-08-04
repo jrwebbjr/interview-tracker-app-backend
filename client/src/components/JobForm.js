@@ -50,7 +50,7 @@ export default function JobForm({ user, setUser }){
             <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ ease: 'easeIn', duration: .5 }}
+            transition={{ ease: 'easeInElastic', duration: .5 }}
             className="flex justify-center min-h-full p-6">
                 <form className="rounded-lg shadow-xlg bg-white border-2 w-96 p-6 m-10" autoComplete="off" onSubmit={handleSubmit}>
                 <div className="flex justify-center">
