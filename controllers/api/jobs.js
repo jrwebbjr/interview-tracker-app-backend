@@ -16,7 +16,7 @@ async function index(req, res) {
         //Sort is working correctly by date, -1 is newest to oldest .exec() executes and stops the line.
         res.status(200).json(jobs);
     }catch(e){
-        res.status(400).json({ msg: e.message, msg: JoeIDXError });
+        res.status(400).json({ msg: e.message });
     }
 }
 

@@ -16,7 +16,7 @@ export default function JobForm({ user, setUser }){
         history: '',
         process: '',
         notes: '',
-        technical: ''
+        technical: '',
     })
     const [isPending, setIsPending] = useState(false);
 
@@ -50,7 +50,7 @@ export default function JobForm({ user, setUser }){
             <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ ease: 'easeIn', duration: 1 }}
+            transition={{ ease: 'easeIn', duration: .5 }}
             className="flex justify-center min-h-full p-6">
                 <form className="rounded-lg shadow-xlg bg-white border-2 w-96 p-6 m-10" autoComplete="off" onSubmit={handleSubmit}>
                 <div className="flex justify-center">
@@ -321,6 +321,10 @@ export default function JobForm({ user, setUser }){
                     <div className="mb-3 xl:w-96">
                         <label for="interview notes" className="form-label inline-block mb-2 text-gray-700">Interview Notes</label>
                             <textarea 
+                            type="text"
+                            name="notes"
+                            value={jobForm.notes}
+                            onChange={handleChange}
                             className="
                             form-control
                             block
@@ -349,6 +353,8 @@ export default function JobForm({ user, setUser }){
                     <div className="mb-3 xl:w-96">
                         <label for="Technical Notes" className="form-label inline-block mb-2 text-gray-700">Technical Notes</label>
                         <textarea
+                        type="text"
+                        name="Technical"
                         value={jobForm.technical}
                         onChange={handleChange}
                         className="
