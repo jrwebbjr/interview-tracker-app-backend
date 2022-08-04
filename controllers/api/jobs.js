@@ -50,6 +50,7 @@ async function create(req, res) {
         res.status(200).json(job);
     }catch(e){
         res.status(400).json({ msg: e.message });
+        console.log("Create Job Function Error")
     }
 }
 
