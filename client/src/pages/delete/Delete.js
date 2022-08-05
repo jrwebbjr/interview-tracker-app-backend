@@ -13,7 +13,7 @@ export default function Delete({ user, job, didDelete ,setDidDelete }){
         try{ 
             await jobsApi.destroy(user._id, id)
             setDidDelete(!didDelete)
-            Navigate(`/JobIndex}`);
+            Navigate("/delete}");
         } catch(err){
             console.error(err)
         }
