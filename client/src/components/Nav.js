@@ -28,10 +28,7 @@ export default function Nav(){
     } 
 
     return (
-        <motion.nav 
-        initial={{ y: -200 }}
-        animate={{ y: 0 }}
-        transition={{ ease: 'easeInElastic', duration: .5 }}
+        <nav 
         className="flex items-center justify-between flex-wrap bg-gradient-to-l from-indigo-600 via-blue-600 to-cyan-600 p-6 border-b-2 sticky top-0">
             <div className="flex items-center justify-center flex-shrink-0 text-white mr-6 ml-6">
                 <span className="font-dosis font-bold text-6xl tracking-tight">Apply</span>
@@ -49,6 +46,6 @@ export default function Nav(){
                 <button onClick={handleClick} class="inline-block text-sm px-4 mr-6 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-indigo-600 hover:bg-white mt-4 lg:mt-0">Sign Out</button>
                 </div>
             </div>
-        </motion.nav>
+        </nav>
     )
 }
