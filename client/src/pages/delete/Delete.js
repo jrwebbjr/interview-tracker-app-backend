@@ -2,7 +2,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import * as jobsApi from '../../utilities/jobs-api';
 import Nav from '../../components/Nav';
-import JobIndex from '../jobIndex/JobIndex';
 
 export default function Delete({ user, job, didDelete ,setDidDelete }){
     let { id } = useParams()
