@@ -10,10 +10,7 @@ export default function Delete({ user, didDelete ,setDidDelete }){
 
     const handleClick = async () => {
         try{ 
-            //TODO: Change your url routes to be correct like below...pass user.id in as props to work
-            await axios.delete(`http://localhost:3001/api/jobs/${user._id}/delete/${id}`).then(() => {
-                Navigate('/index')
-            })
+            await jobsApi.destroy(user._id, job._id)
             setDidDelete(!didDelete)
         } catch(err){
             console.error(err)
