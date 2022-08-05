@@ -17,6 +17,6 @@ export function showJob(userId, id) {
     return sendRequest(`/api/jobs/${userId}/show/${id}`, 'GET', null);
 }
 
-export function Destroy(userId, id) {
+export function destroy(userId, id) {
     return sendRequest(`/api/jobs/${userId}/delete/${id}`, 'DELETE');
 }
