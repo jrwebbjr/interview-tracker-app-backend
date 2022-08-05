@@ -28,20 +28,14 @@ export default function Update({ user, jobs }){
         setJob(jobs.find((obj) => obj._id === id))
     }, [])
 
-    console.log(job)
-    console.log(user._id)
-
     const handleSubmit = async (e) => {
-        console.log("before Try")
         //prevents default behavior which stops page from refreshing
         e.preventDefault();
         
         try{ 
-            console.log("after Try")
             await jobsApi.updateJob(user._id, job._id, {
                 company: company.current.value, location: location.current.value, position: position.current.value, date: date.current.value, status: status.current.value, applicationService: applicationService.current.value, contacts: contacts.current.value, history: history.current.value, interviewProcess: interviewProcess.current.value, interviewNotes: interviewNotes.current.value, technicalNotes: technicalNotes.current.value
             })
-            console.log("After API")
             Navigate(-1);
         }catch(error) {
             console.error(error)
