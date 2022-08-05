@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import axios from 'axios';
+import * as jobsApi from '../../utilities/jobs-api';
 import Nav from '../../components/Nav';
 
-export default function Delete({ user, didDelete ,setDidDelete }){
+export default function Delete({ user, job, didDelete ,setDidDelete }){
     let { id } = useParams()
 
     const Navigate = useNavigate({ user });
