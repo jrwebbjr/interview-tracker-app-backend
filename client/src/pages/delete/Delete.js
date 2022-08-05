@@ -2,6 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import * as jobsApi from '../../utilities/jobs-api';
 import Nav from '../../components/Nav';
+import JobIndex from '../jobIndex/JobIndex';
 
 export default function Delete({ user, job, didDelete ,setDidDelete }){
     let { id } = useParams()
@@ -12,7 +13,7 @@ export default function Delete({ user, job, didDelete ,setDidDelete }){
         try{ 
             await jobsApi.destroy(user._id, id)
             setDidDelete(!didDelete)
-            Navigate( "../JobIndex" )
+            Navigate(`/JobIndex}`);
         } catch(err){
             console.error(err)
         }

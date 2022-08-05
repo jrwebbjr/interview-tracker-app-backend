@@ -30,7 +30,7 @@ export default function ShowJob({ user }){
             <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ ease: 'easeIn', duration: 1 }}
+            transition={{ ease: 'easeIn', duration: .5 }}
             className='flex justify-center'>
                 <div className='m-10 mb-5 block p-6 rounded-lg shadow-lg bg-white border-2 border-solid border-indigo-600 w-screen'>
                     { job ?
