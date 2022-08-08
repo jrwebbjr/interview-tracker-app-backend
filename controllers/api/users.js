@@ -35,9 +35,9 @@ async function create(req, res) {
     // which we need to account for
     // in the client
     res.status(200).json(token);
-    console.log("before Catch on create user function")
   } catch (e) {
-    res.status(400).json(`${e} You Found The Problem `);
+    res.status(400).json(e);
+    console.log("Throwing the Catch Error at Create Function")
   }
 }
 
