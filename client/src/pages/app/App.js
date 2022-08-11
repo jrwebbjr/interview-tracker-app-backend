@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../authPage/AuthPage';
 import JobForm from "../../components/JobForm";
-import Update from "../Update/Update";
+import Update from "../update/Update";
 import JobIndex from "../jobIndex/JobIndex";
 import ShowJob from '../showJob/ShowJob';
 import Delete from '../delete/Delete';
@@ -23,6 +23,7 @@ function App() {
 
     useEffect(() => {
         fetchJobs()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [didDelete]) 
 
   return (

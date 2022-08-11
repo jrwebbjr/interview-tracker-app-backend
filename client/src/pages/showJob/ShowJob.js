@@ -18,6 +18,7 @@ export default function ShowJob({ user }){
 
     useEffect(() => {
         fetchJobs()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []) 
 
     const handleClick = () => {

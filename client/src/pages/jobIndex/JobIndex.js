@@ -8,7 +8,7 @@ import Nav from '../../components/Nav';
 
 const JobIndex = ({  jobs }) => {
 
-    const [job, setJob] = useState(null);
+    const [setJob] = useState(null);
     
     return (
         <>
