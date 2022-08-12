@@ -23,7 +23,6 @@ function App() {
 
     useEffect(() => {
         fetchJobs()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [didDelete]) 
 
   return (

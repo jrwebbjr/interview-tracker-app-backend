@@ -26,7 +26,6 @@ export default function Update({ user, jobs }){
 
     useEffect(() => {
         setJob(jobs.find((obj) => obj._id === id))
-        // eslint-disable-next-line
     }, [])
 
     const handleSubmit = async (e) => {

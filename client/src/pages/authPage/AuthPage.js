@@ -11,7 +11,6 @@ export default function AuthPage({ setUser }) {
       <div className='flex flex-col items-center'>
         <h1 className='text-white font-dosis text-8xl mt-20'>Welcome to Apply!</h1>
       </div>
-      {/* <SignUpForm setUser={setUser}/> */}
       <div className='flex justify-center bg-cyan-500 w-screen h-10 mt-5 mb-5'>
         <h3
         className='text-indigo-600 font-dosis text-5xl cursor-pointer' 
