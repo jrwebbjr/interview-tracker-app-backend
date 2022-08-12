@@ -10,7 +10,7 @@ export default function Delete({ user, job, didDelete ,setDidDelete }){
 
     const handleClick = async () => {
         try{ 
-            await jobsApi.destroy(user._id, id)
+            const res = await jobsApi.destroy(user._id, id)
             setDidDelete(!didDelete)
             Navigate(`/index`)
         } catch(err){
