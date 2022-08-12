@@ -24,7 +24,7 @@ export function getToken() {
   // getItem will return null if no key
   if (!token) return null;
   // replace atob
-  const payload = JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString())
+  const payload = Buffer.from(token.split('.')[1], 'base64').toString();
   // const payload = JSON.parse(atob(token.split('.')[1]));
   // A JWT's expiration is expressed in seconds, not miliseconds
   if (payload.exp < Date.now() / 1000) {
@@ -38,7 +38,7 @@ export function getToken() {
 export function getUser() {
   const token = getToken();
   // replaced atob with Buffer
-  return token ? JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString()).user : null;
+  return token ? Buffer.from(token.split('.')[1], 'base64').toString().user : null;
 }
 // ATOB() not working
 //   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
