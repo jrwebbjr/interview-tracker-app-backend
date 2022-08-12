@@ -21,9 +21,9 @@ function App() {
         setJobs(res)
     }
 
-    // useEffect(() => {
-    //     fetchJobs()
-    // }, [didDelete]) 
+    useEffect(() => {
+        fetchJobs()
+    }, [didDelete]) 
 
   return (
     <main className='overscroll-none font-sans w-screen min-h-screen bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500'>
