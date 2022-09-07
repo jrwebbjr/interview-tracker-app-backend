@@ -1,12 +1,21 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {  Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Nav from '../../components/Nav';
+import * as jobsApi from '../../utilities/jobs-api';
 
 
 
-const JobIndex = ({  jobs }) => {
+const JobIndex = ({  jobs, user, setJobs, didDelete }) => {
+
+    useEffect(() => { 
+        async function fetchJobs() {
+          const res = await jobsApi.getJobs(user._id)
+          setJobs(res)
+      }
+      fetchJobs();
+      },[didDelete, user._id, setJobs]) 
 
     const [setJob] = useState(null);
     

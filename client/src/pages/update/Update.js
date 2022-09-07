@@ -26,7 +26,7 @@ export default function Update({ user, jobs }){
 
     useEffect(() => {
         setJob(jobs.find((obj) => obj._id === id))
-    }, [])
+    }, [id, jobs])
 
     const handleSubmit = async (e) => {
         //prevents default behavior which stops page from refreshing

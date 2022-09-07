@@ -14,7 +14,7 @@ export default function AuthPage({ setUser }) {
       <div className='flex justify-center bg-cyan-500 w-screen h-10 mt-5 mb-5'>
         <h3
         className='text-indigo-600 font-dosis text-5xl cursor-pointer' 
-        onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Not yet a member? Sign up here' : 'Already a member? Log in here'}</h3>
+        onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Not yet a member? Click here to sign up!' : 'Already a member? Welcome back, click here to login!'}</h3>
       </div>
       {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
     </main>

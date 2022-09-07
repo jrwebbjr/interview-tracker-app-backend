@@ -1,5 +1,5 @@
 import '../../../src/App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../authPage/AuthPage';
@@ -8,7 +8,7 @@ import Update from "../update/Update";
 import JobIndex from "../jobIndex/JobIndex";
 import ShowJob from '../showJob/ShowJob';
 import Delete from '../delete/Delete';
-import * as jobsApi from '../../utilities/jobs-api';
+// import * as jobsApi from '../../utilities/jobs-api';
 
 
 function App() {
@@ -16,14 +16,15 @@ function App() {
   const [jobs, setJobs] = useState([])
   const [didDelete, setDidDelete] = useState(false)
 
-    const fetchJobs = async() => {
-        const res = await jobsApi.getJobs(user._id)
-        setJobs(res)
-    }
+    // const fetchJobs = async() => {
+    //     const res = await jobsApi.getJobs(user._id)
+    //     setJobs(res)
+    // }
 
-    useEffect(() => {
-        fetchJobs()
-    }, [didDelete]) 
+    // useEffect(() => {
+    //     fetchJobs()
+    // }, [didDelete]) 
+  
 
   return (
     <main className='overscroll-none font-sans w-screen min-h-screen bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500'>

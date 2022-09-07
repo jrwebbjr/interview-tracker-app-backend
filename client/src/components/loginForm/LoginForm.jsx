@@ -36,7 +36,7 @@ return (
     <motion.div 
     initial={{ scale: 0 }}
     animate={{ scale: 1 }}
-    transition={{ ease: 'easeInElastic', duration: .5 }}
+    transition={{ ease: 'easeIn', duration: .5 }}
     className='flex justify-center items-center'>
       <div className='flex flex-col justify-center h-max w-max'>
         <div className="h-max w-max flex justify-center items-center mt-5 rounded-lg shadow-xl bg-white border-2 border-indigo-600">

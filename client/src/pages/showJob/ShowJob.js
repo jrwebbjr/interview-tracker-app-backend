@@ -16,10 +16,13 @@ export default function ShowJob({ user }){
     //     setJob(res)
     // }
 
-    useEffect( async() => {
+    useEffect(() => { 
+        async function fetchJobs() {
         const res = await jobsApi.showJob(user._id, id)
         setJob(res)
-    },[]) 
+    }
+    fetchJobs();
+    },[id, user._id]) 
 
     const handleClick = () => {
         Navigate(`/update/${job._id}`);
