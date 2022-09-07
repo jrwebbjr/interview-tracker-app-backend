@@ -37,7 +37,6 @@ async function create(req, res) {
     res.status(200).json(token);
   } catch (e) {
     res.status(400).json(e);
-    console.log("Throwing the Catch Error at Create Function")
   }
 }
 

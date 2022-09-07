@@ -1,7 +1,5 @@
 import * as usersAPI  from './users-api';
 
-const Buffer = require('buffer/').Buffer  // import buffer without browserify note: the trailing slash is important!
-
 export async function signUp(userData) {
   // Delete the network request code to the
   // users-api.js module which will ultimately
