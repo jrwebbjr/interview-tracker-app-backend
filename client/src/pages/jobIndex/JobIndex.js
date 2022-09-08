@@ -10,17 +10,6 @@ import Nav from '../../components/Nav';
 const JobIndex = ({  jobs, user, setJobs, didDelete }) => {
     const [setJob] = useState(null);
 
-    // useEffect(() => { 
-    //   fetchJobs();
-    //   },[didDelete, user._id, setJobs]) 
-
-    // const fetchJobs = async() => { 
-    //     const res = await jobsApi.getJobs(user._id)
-    //     setJobs(res)
-    // }
-
-    
-    
     return (
         <>
             <motion.div

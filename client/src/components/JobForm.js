@@ -33,7 +33,7 @@ export default function JobForm({ user, setUser }){
         setIsPending(true);
         
         try{ 
-            await fetch("/api/jobs/new", {
+            await fetch("/api/jobs", {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(jobForm),
