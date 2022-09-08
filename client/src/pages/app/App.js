@@ -1,5 +1,5 @@
 import '../../../src/App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../authPage/AuthPage';
@@ -8,7 +8,7 @@ import Update from "../update/Update";
 import JobIndex from "../jobIndex/JobIndex";
 import ShowJob from '../showJob/ShowJob';
 import Delete from '../delete/Delete';
-// import * as jobsApi from '../../utilities/jobs-api';
+import * as jobsApi from '../../utilities/jobs-api';
 
 
 function App() {
