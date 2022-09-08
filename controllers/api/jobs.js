@@ -51,7 +51,6 @@ async function create(req, res) {
         res.status(200).json(job);
     }catch(e){
         res.status(400).json({ msg: e.message });
-        console.log("Async Create Function Says No, FUCK YOU!")
     }
 }
 
