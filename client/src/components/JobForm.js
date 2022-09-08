@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import Nav from "./Nav";
 import('../App.css');
+import * as jobsApi from '../../utilities/jobs-api';
 
 export default function JobForm({ user, setUser }){
     const [jobForm, setJobForm] = useState({
@@ -40,6 +41,7 @@ export default function JobForm({ user, setUser }){
         }); Navigate('/index');
         }catch(error) {
             console.error(error)
+            console.error('There has been a problem with your fetch operation:', error);
     } finally {
         setIsPending(false)
     }
