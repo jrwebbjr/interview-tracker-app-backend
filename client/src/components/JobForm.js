@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import Nav from "./Nav";
 import('../App.css');
-import * as jobsApi from '../../utilities/jobs-api';
+import * as jobsApi from '../../src/utilities/jobs-api';
 
 export default function JobForm({ user, setUser }){
     const [jobForm, setJobForm] = useState({
@@ -31,8 +31,6 @@ export default function JobForm({ user, setUser }){
         //prevents page from refreshing
         e.preventDefault();
         
-        setIsPending(true);
-        
         try{ 
             await fetch("/api/jobs", {
             method: "POST",
@@ -42,9 +40,7 @@ export default function JobForm({ user, setUser }){
         }catch(error) {
             console.error(error)
             console.error('There has been a problem with your fetch operation:', error);
-    } finally {
-        setIsPending(false)
-    }
+    } 
 }
     return(
         <div>
@@ -384,9 +380,8 @@ export default function JobForm({ user, setUser }){
                 </div>
                 <br/>
                 <div className="flex justify-center">
-                    { !isPending && <button className="nline-block px-6 py-2.5 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-500 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" type="submit"> Add Job</button> }
-                    { isPending && <button disabled className="nline-block px-6 py-2.5 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-500 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" type="submit">
-                    </button> }
+                    <button className="nline-block px-6 py-2.5 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-500 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" type="submit"> Add Job
+                    </button> 
                 </div>
                 </form>
             </motion.div>
