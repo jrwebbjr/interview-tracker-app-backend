@@ -16,15 +16,14 @@ function App() {
   const [jobs, setJobs] = useState([])
   const [didDelete, setDidDelete] = useState(false)
 
-    // const fetchJobs = async() => {
-    //     const res = await jobsApi.getJobs(user._id)
-    //     setJobs(res)
-    // }
+    useEffect(() => {
+        fetchJobs()
+    }, [didDelete]) 
 
-    // useEffect(() => {
-    //     fetchJobs()
-    // }, [didDelete]) 
-  
+    const fetchJobs = async() => {
+      const res = await jobsApi.getJobs(user._id)
+      setJobs(res)
+  }
 
   return (
     <main className='overscroll-none font-sans w-screen min-h-screen bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500'>

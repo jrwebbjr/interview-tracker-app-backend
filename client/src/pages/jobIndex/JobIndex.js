@@ -8,16 +8,18 @@ import * as jobsApi from '../../utilities/jobs-api';
 
 
 const JobIndex = ({  jobs, user, setJobs, didDelete }) => {
+    const [setJob] = useState(null);
 
     useEffect(() => { 
-        async function fetchJobs() {
-          const res = await jobsApi.getJobs(user._id)
-          setJobs(res)
-      }
       fetchJobs();
       },[didDelete, user._id, setJobs]) 
 
-    const [setJob] = useState(null);
+    const fetchJobs = async() => { 
+        const res = await jobsApi.getJobs(user._id)
+        setJobs(res)
+    }
+
+    
     
     return (
         <>
