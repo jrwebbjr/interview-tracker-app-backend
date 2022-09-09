@@ -32,21 +32,15 @@ export default function JobForm({ user, setUser }){
         e.preventDefault();
         
         try{ 
-            const res = await jobsApi.createJob(user._id)
+            await fetch("/api/jobs/${userId}/new", {
+                method: "POST",
+                headers: { "Content-Type": "application/json"},
+                body: JSON.stringify(jobForm),
+            }); Navigate('/index');
         } catch(error){
             console.error('There has been a problem with your fetch operation:', error);
         }
     }
-
-
-        //     await fetch("/api/jobs", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json"},
-        //     body: JSON.stringify(res),
-        // }); Navigate('/index');
-        // }catch(error) {
-        //     console.error(error)
-            
 
     return(
         <div>
@@ -56,7 +50,7 @@ export default function JobForm({ user, setUser }){
             animate={{ scale: 1 }}
             transition={{ ease: 'easeInElastic', duration: .5 }}
             className="flex justify-center min-h-full p-6">
-                <form className="rounded-lg shadow-xlg bg-white border-2 w-96 p-6 m-10" autoComplete="off" onSubmit={handleSubmit}>
+                <form method="post" className="rounded-lg shadow-xlg bg-white border-2 w-96 p-6 m-10" autoComplete="off" onSubmit={handleSubmit}>
                 <div className="flex justify-center">
                     <div className="mb-3 xl:w-96">
                         <label className="form-label inline-block mb-2 text-gray-700">Company</label>
