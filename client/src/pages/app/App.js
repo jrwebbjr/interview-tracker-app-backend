@@ -21,7 +21,7 @@ function App() {
     }, [didDelete]) 
 
     const fetchJobs = async() => {
-      const res = await jobsApi.getJobs(user._id)
+      const res = await jobsApi.getJobs(user)
       setJobs(res)
   }
 
