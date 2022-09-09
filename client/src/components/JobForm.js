@@ -31,15 +31,21 @@ export default function JobForm({ user, setUser }){
         //prevents page from refreshing
         e.preventDefault();
         
-        try{ 
-            await fetch(`/api/jobs/${user._id}/new`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json"},
-                body: JSON.stringify(jobForm),
-            }); Navigate('/index');
+        try{
+            await jobsApi.createJob(user._id)
+            Navigate(`/index`)
         } catch(error){
-            console.error('There has been a problem with your fetch operation:', error);
+            console.error("There has been a problem with your fetch operation:", error);
         }
+        // try{ 
+        //     await fetch(`/api/jobs/${user._id}/new`, {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json"},
+        //         body: JSON.stringify(jobForm),
+        //     }); Navigate('/index');
+        // } catch(error){
+        //     console.error('There has been a problem with your fetch operation:', error);
+        // }
     }
 
     return(
