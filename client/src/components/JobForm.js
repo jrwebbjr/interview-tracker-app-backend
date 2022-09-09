@@ -1,9 +1,10 @@
+import * as jobsApi from '../../src/utilities/jobs-api';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import Nav from "./Nav";
 import('../App.css');
-import * as jobsApi from '../../src/utilities/jobs-api';
+
 
 export default function JobForm({ user, setUser }){
     const [jobForm, setJobForm] = useState({
@@ -31,7 +32,7 @@ export default function JobForm({ user, setUser }){
         e.preventDefault();
         
         try{ 
-            const res = await jobsApi.createJob(user._id, id)
+            const res = await jobsApi.createJob(user._id)
         } catch(error){
             console.error('There has been a problem with your fetch operation:', error);
         }
