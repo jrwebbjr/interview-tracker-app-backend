@@ -32,7 +32,7 @@ export default function JobForm({ user, setUser }){
         e.preventDefault();
         
         try{ 
-            await fetch(`/api/jobs/${userId}/new`, {
+            await fetch(`/api/jobs/${user._id}/new`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(jobForm),
