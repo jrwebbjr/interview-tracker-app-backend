@@ -8,7 +8,7 @@ router.delete('/:userid/delete/:id', jobsCtrl.destroy)
 
 router.put('/:userid/update/:id', jobsCtrl.update);
 
-router.post('/:userid/new', jobsCtrl.create);
+router.post('/:userid/new/', jobsCtrl.create);
 
 router.get('/:userid/show/:id', jobsCtrl.show);
 //actual route /api/jobs/:id 
