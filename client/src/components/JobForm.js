@@ -32,10 +32,11 @@ export default function JobForm({ user, setUser }){
         e.preventDefault();
         
         try{
-            await jobsApi.createJob(user._id)
+            await jobsApi.createJob(user._id, id) //removed payload added id 9/9/22.
             Navigate(`/index`)
         } catch(error){
             console.error("There has been a problem with your fetch operation:", error);
+            //Above Error Throws whenever attempting to create job 9/9/22, can't figure out issue.
         }
         // try{ 
         //     await fetch(`/api/jobs/${user._id}/new`, {

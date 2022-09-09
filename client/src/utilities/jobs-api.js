@@ -6,8 +6,8 @@ export function getJobs(userId) {
   return sendRequest(`/api/jobs/${userId}/index`, 'GET', null);
 }
 // removed id from createJob
-export function createJob(userId, payload) {
-    return sendRequest(`/api/jobs/${userId}/new`, 'POST', payload);
+export function createJob(userId, id, payload) {
+    return sendRequest(`/api/jobs/${userId}/new/${id}`, 'POST', payload);
 }
 
 export function updateJob(userId, id, payload) {
