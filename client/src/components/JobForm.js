@@ -19,7 +19,6 @@ export default function JobForm({ user, setUser }){
         notes: '',
         technical: '',
     })
-    const [isPending, setIsPending] = useState(false);
 
     const Navigate = useNavigate();
 
@@ -32,16 +31,22 @@ export default function JobForm({ user, setUser }){
         e.preventDefault();
         
         try{ 
-            await fetch("/api/jobs", {
-            method: "POST",
-            headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(jobForm),
-        }); Navigate('/index');
-        }catch(error) {
-            console.error(error)
+            const res = await jobsApi.createJob(user._id, id)
+        } catch(error){
             console.error('There has been a problem with your fetch operation:', error);
-    } 
-}
+        }
+    }
+
+
+        //     await fetch("/api/jobs", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json"},
+        //     body: JSON.stringify(res),
+        // }); Navigate('/index');
+        // }catch(error) {
+        //     console.error(error)
+            
+
     return(
         <div>
             <Nav />

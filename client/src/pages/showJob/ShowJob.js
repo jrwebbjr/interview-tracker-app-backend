@@ -11,11 +11,6 @@ export default function ShowJob({ user }){
 
     const [job, setJob] = useState(null);
 
-    // const fetchJobs = async() => {
-    //     const res = await jobsApi.showJob(user._id, id)
-    //     setJob(res)
-    // }
-
     useEffect(() => { 
         async function fetchJobs() {
         const res = await jobsApi.showJob(user._id, id)
