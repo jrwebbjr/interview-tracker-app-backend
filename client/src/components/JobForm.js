@@ -8,6 +8,7 @@ import('../App.css');
 
 export default function JobForm({ user, setUser }){
     const [jobForm, setJobForm] = useState({
+        user: 'user._id',
         company: '',
         location: '',
         position: '',
