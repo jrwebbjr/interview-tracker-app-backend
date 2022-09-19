@@ -13,14 +13,14 @@ export default function JobForm({ user, setUser }){
         position: '',
         date: '',
         status: '',
-        service: '',
+        applicationService: '',
         contacts: '',
         history: '',
-        process: '',
-        notes: '',
-        technical: '',
+        interviewProcess: '',
+        interviewNotes: '',
+        technicalNotes: '',
     })
-
+    
     const Navigate = useNavigate();
 
     const handleChange = (e) => {
