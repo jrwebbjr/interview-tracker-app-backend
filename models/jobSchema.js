@@ -4,9 +4,9 @@ const Schema = require('mongoose').Schema;
 
 const jobSchema = new Schema({
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    company: { type: String, required: true },
-    location: { type: String, required: true },
-    position: { type: String, required: true  },
+    company: String,
+    location: String,
+    position: String,
     date: String,
     status: String, 
     applicationService: String,
