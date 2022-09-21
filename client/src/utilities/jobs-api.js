@@ -5,7 +5,7 @@ import sendRequest from './send-request';
 export function getJobs(userId) {
   return sendRequest(`/api/jobs/${userId}/index`, 'GET', null);
 }
-// removed id from createJob
+// * removed id from createJob (didn't work either way)
 export function createJob(userId, payload) {
     return sendRequest(`/api/jobs/${userId}/new`, 'POST', payload);
 }
