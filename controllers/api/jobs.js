@@ -46,6 +46,7 @@ async function update(req, res) {
 //create
 async function create(req, res) {
     try{
+        // * CODE TO GET JWT HERE
         const job = await Job.create(req.body);
         console.log(job);
         res.status(200).json(job);
