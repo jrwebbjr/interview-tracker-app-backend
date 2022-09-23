@@ -15,8 +15,7 @@ const JobIndex = ({  jobs, user, setJobs, didDelete }) => {
             <motion.div
             initial={{ y:-200 }}
             animate={{ y:0 }}
-            transition={{ ease: 'easeIn', duration: '2'}}
-            >
+            transition={{ ease: 'easeIn', duration: '1'}}>
                 <Nav /> 
             </motion.div>
             <main className='w-screen min-h-max flex justify-center py-20 scroll-smooth overscroll-none'>
