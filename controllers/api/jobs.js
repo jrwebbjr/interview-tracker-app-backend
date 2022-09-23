@@ -48,7 +48,7 @@ async function update(req, res) {
 async function create(req, res) {
     try{
         // ? CODE TO GET JWT HERE, TRYING getToken function from users-services
-        getToken()
+        // getToken()
         const job = await Job.create(req.body);
         console.log(job);
         res.status(200).json(job);
