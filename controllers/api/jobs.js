@@ -46,7 +46,7 @@ async function update(req, res) {
 //create
 async function create(req, res) {
     try{
-        const userId = req.params.user_id; // ? Get userid from req.params 
+        const userId = req.body.user_id; // ? Get userid from req.body
         const job = await Job.create(req.body, userId);
         console.log(job);
         res.status(200).json(job);
