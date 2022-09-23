@@ -46,7 +46,7 @@ async function update(req, res) {
 //create
 async function create(req, res) {
     try{
-        const job = await Job.create(req.body);
+        const job = await Job.create(req.body, {user: req.params.id});
         console.log(job);
         res.status(200).json(job);
     }catch(e){
